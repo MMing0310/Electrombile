@@ -8,6 +8,7 @@
 
 #import "AgencyIndexController.h"
 #import "SettingController.h"
+#import "FirstBindController.h"
 #import "BindCell.h"
 #import "UnBindCell.h"
 
@@ -87,14 +88,18 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return  2;
+    if (self.index == 0) {
+        return  2;
+    }else {
+        return 1;
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.index == 0) {
         return 10;
     }else {
-        return 5;
+        return 15;
     }
 }
 
@@ -119,7 +124,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (self.index == 1) {
+        // 绑定
+        FirstBindController *controller = [[FirstBindController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -133,16 +142,27 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectZero];
     headerView.backgroundColor = [UIColor colorWithHexString:@"f8f7fc"];
-    UILabel *dateLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 60, 30)];
-    dateLab.text = @"10月8日";
-    dateLab.font = [UIFont systemFontOfSize:12.0];
-    [headerView addSubview:dateLab];
-    // 绑定数量
-    UILabel *mountLab = [[UILabel alloc] initWithFrame:CGRectMake(85, 0, kScreenW - 110, 30)];
-    mountLab.textAlignment = NSTextAlignmentRight;
-    mountLab.text = @"共绑定1111张，本日绑定44张";
-    mountLab.font = [UIFont systemFontOfSize:12.0];
-    [headerView addSubview:mountLab];
+    
+    if (self.index == 0) {
+        UILabel *dateLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 60, 30)];
+        dateLab.text = @"10月8日";
+        dateLab.font = [UIFont systemFontOfSize:12.0];
+        [headerView addSubview:dateLab];
+        // 绑定数量
+        UILabel *mountLab = [[UILabel alloc] initWithFrame:CGRectMake(85, 0, kScreenW - 110, 30)];
+        mountLab.textAlignment = NSTextAlignmentRight;
+        mountLab.text = @"共绑定1111张，本日绑定44张";
+        mountLab.font = [UIFont systemFontOfSize:12.0];
+        [headerView addSubview:mountLab];
+    }else {
+        // 绑定数量
+        UILabel *mountLab = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, kScreenW - 40, 30)];
+        mountLab.textAlignment = NSTextAlignmentCenter;
+        mountLab.text = @"剩余44张";
+        mountLab.font = [UIFont systemFontOfSize:12.0];
+        [headerView addSubview:mountLab];
+    }
+    
     return  headerView;
 }
 

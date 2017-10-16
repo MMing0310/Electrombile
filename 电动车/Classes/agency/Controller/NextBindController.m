@@ -31,10 +31,8 @@
 // 相关配置
 - (void)configSubView {
     // 标题
-    [self setNavTitle:@"绑定"];
-    // 取消
-    UIImage *img = [UIImage imageNamed:@"back"];
-    [PublicClass setLeftButtonItemOnTargetNav:self action:@selector(backAction) image:img Title:@"取消"];
+    [self setNavTitle:@"绑定2"];
+    
 }
 
 // 返回按钮
