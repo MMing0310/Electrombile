@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NextBindCell" rowHeight="334" id="KGk-i7-Jjw" customClass="NextBindCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="334"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NextBindCell" rowHeight="254" id="KGk-i7-Jjw" customClass="NextBindCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="254"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="333.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="253.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-z2-APL">
@@ -225,23 +225,11 @@
                             <constraint firstItem="r2e-kJ-Xzl" firstAttribute="leading" secondItem="UCx-q0-oJS" secondAttribute="trailing" constant="10" id="zw3-g6-BGo"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvz-Uf-2fo">
-                        <rect key="frame" x="110" y="273" width="100" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="F17-9H-gTq"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <state key="normal" title="完成绑定" backgroundImage="buttombgl.png">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                 </subviews>
                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="H4u-z2-APL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8RV-hn-HlV"/>
                     <constraint firstItem="H4u-z2-APL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ea5-MS-GDi"/>
-                    <constraint firstItem="Zvz-Uf-2fo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KVU-NX-ZzF"/>
-                    <constraint firstItem="Zvz-Uf-2fo" firstAttribute="top" secondItem="bDu-XZ-udZ" secondAttribute="bottom" constant="30" id="Ppq-C8-RCW"/>
                     <constraint firstItem="bDu-XZ-udZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UvL-iY-TLW"/>
                     <constraint firstItem="fUe-Fe-QcP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wtn-IZ-Ve9"/>
                     <constraint firstItem="fUe-Fe-QcP" firstAttribute="top" secondItem="H4u-z2-APL" secondAttribute="bottom" id="dP9-uo-hX1"/>
@@ -259,11 +247,10 @@
                 <outlet property="phoneTF" destination="r2e-kJ-Xzl" id="llW-Wv-TFJ"/>
                 <outlet property="titleLab" destination="VvS-go-hNx" id="N5Y-Qg-xQA"/>
             </connections>
-            <point key="canvasLocation" x="-111" y="41"/>
+            <point key="canvasLocation" x="-111" y="-5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="buttom.png" width="90" height="25"/>
-        <image name="buttombgl.png" width="175" height="40"/>
     </resources>
 </document>
