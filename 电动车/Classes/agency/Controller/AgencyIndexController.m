@@ -29,11 +29,14 @@
 
 @implementation AgencyIndexController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
+- (void)viewWillAppear:(BOOL)animated {
     // 相关配置
     [self configSubView];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
 }
 
 // 相关配置
@@ -41,6 +44,7 @@
     // 初始化
     self.index = 0;
     // 颜色
+    [self.bindBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.unBindBtn setTitleColor:[UIColor colorWithHexString:@"808080"] forState:UIControlStateNormal];
 }
 

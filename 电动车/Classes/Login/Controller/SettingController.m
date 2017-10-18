@@ -33,9 +33,6 @@
 - (void)configSubView {
     // 标题
     [self setNavTitle:@"设置"];
-    // 取消
-    UIImage *img = [UIImage imageNamed:@"back"];
-    [PublicClass setLeftButtonItemOnTargetNav:self action:@selector(backAction) image:img Title:@""];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

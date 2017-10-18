@@ -21,11 +21,11 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    if (![self isRootViewController] ) {
-        [self setNavigationBarBackgroundColor:[UIColor whiteColor]];
-        [PublicClass setLeftButtonItemOnTargetNav:self action:@selector(backtoTop) image:[UIImage imageNamed:@"btn_fh_b"] Title:@""];
-
-    }
+//    if (![self isRootViewController] ) {
+//        [self setNavigationBarBackgroundColor:[UIColor whiteColor]];
+//        [PublicClass setLeftButtonItemOnTargetNav:self action:@selector(backtoTop) image:[UIImage imageNamed:@"btn_fh_b"] Title:@""];
+//
+//    }
     
     UINavigationBar *navigationBar = self.navigationController.navigationBar;
     [navigationBar setBackgroundImage:[[UIImage alloc] init] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault]; //此处使底部线条颜色为红色

@@ -31,8 +31,8 @@
     // 完成
     [PublicClass setRightTitleOnTargetNav:self action:@selector(submitAction) Title:@"完成"];
     // 取消
-    UIImage *img = [UIImage imageNamed:@""];
-    [PublicClass setLeftButtonItemOnTargetNav:self action:@selector(backAction) image:img Title:@"取消"];
+//    UIImage *img = [UIImage imageNamed:@""];
+//    [PublicClass setLeftButtonItemOnTargetNav:self action:@selector(backAction) image:img Title:@"取消"];
 }
 
 // 点击事件-- 完成
@@ -40,9 +40,9 @@
     
 }
 // 返回按钮
-- (void)backAction {
-    [self.navigationController popViewControllerAnimated:true];
-}
+//- (void)backAction {
+//    [self.navigationController popViewControllerAnimated:true];
+//}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
